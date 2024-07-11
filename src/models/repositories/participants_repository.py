@@ -28,7 +28,7 @@ class ParticipantsRepository:
             '''
                 SELECT p.id, p.name, p.is_confirmed, e.email
                 from participants as p
-                JOIN emails_to_invite as e ON e.id = p.email_to_invite_id
+                JOIN emails_to_invite as e ON e.id = p.emails_to_invite_id
                 WHERE p.trip_id = ?
             ''', (
                 trip_id
